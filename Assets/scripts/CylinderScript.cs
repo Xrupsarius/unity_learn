@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class CylinderScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public bool isRotateActive = true;
     void Update()
     {
-        
+        if (isRotateActive)
+        {
+            transform.eulerAngles += new Vector3(-5, 0, 0) * Time.deltaTime;
+        }
     }
 }
